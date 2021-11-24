@@ -15,7 +15,7 @@ tx_key = os.environ['KEY']
 #背景
 
 def bgimg():
-    bg_size = (1080, 2300)
+    bg_size = (1080, 2500)
     bg_small=(980,330)
     img = Image.new("RGBA",bg_size,(245,245,245))
     draw = ImageDraw.Draw(img)
@@ -65,7 +65,7 @@ def draw_text(draw):
     else:
         today = '星期' + cn2an.an2cn(today)
     font = ImageFont.truetype(fontpath1,80, encoding="utf-8")
-    draw.text((430, 65), today, font=font, fill=(255, 255, 255))
+    draw.text((430, 80), today, font=font, fill=(255, 255, 255))
     font_small = ImageFont.truetype(fontpath1, 35)
     draw.text((50, 450), "农历", font=font_small, fill=(0, 0, 0))
     draw.text((50, 500),nonli(), font=font_small, fill=(0, 0, 0))
@@ -76,6 +76,7 @@ def draw_text(draw):
 
     font_sentence = ImageFont.truetype(fontpath, 25)
     draw.text((220,280),verse(),font=font_sentence)
+    draw.text((820,320), "来点每日新闻！",font=font_sentence)
 
 
     font_news = ImageFont.truetype(fontpath, 35)
@@ -128,7 +129,7 @@ def verse():
     verse_list = loads.get('newslist')
     source = verse_list[0].get('source')
     saying = verse_list[0].get('saying')
-    verse_str = '【微语】 ' + saying
+    verse_str = '多米诺说：“' + saying + '”'
     resp_verse = verse_str
     if len(verse_str) > 22:
         resp_verse = verse_str[:26] + '\n' + verse_str[26:]
@@ -142,8 +143,8 @@ def historyList():
     for index in range(len(list)):
         title = list[index].get('event')
     # print(title)
-        if len(title) > 25:
-            title = title[:25] + '\n\n' + title[25:]
+        if len(title) > 26:
+            title = title[:26] + '\n\n' + title[26:]
         historytitle +=  title + '\n\n'
     # print(historytitle)
     return historytitle
