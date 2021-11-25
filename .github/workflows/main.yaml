@@ -4,8 +4,10 @@ on:
   push:
     branches: 
       - main
-  schedule:
-   - cron: '1 0 * * *'
+    schedule:
+      - cron: '1 0 * * *'
+    tags:
+      - 'v$(date +%Y%m%d%H%M%S)'
 jobs:
   Pic-spider:
     runs-on: ubuntu-latest
@@ -37,9 +39,19 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.TOKEN }}
+      - name: 'Create a Release'
+        uses: elgohr/Github-Release-Action@master
+           env:
+           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+         with:
+           args: news
+
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
         # with:
         #   args: news
+        
+
+          args: MyReleaseMessage
