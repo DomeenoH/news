@@ -9,6 +9,7 @@ on:
 jobs:
   Pic-spider:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -23,6 +24,7 @@ jobs:
       - name: 'Working'
         env:
           KEY: ${{secrets.KEY}}
+          TZ: 'Asia/Shanghai'
         timeout-minutes: 360
         run: bash ./main.sh
       - name: Commit files
