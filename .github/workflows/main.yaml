@@ -3,11 +3,12 @@ name: 'GitHub Actions news'
 on:
   push:
     branches: 
-      - main
-    schedule:
-      - cron: '1 0 * * *'
+    - main
+  schedule:
+  - cron: '1 0 * * *'
+  - cron: '1 16 * * *'
     tags:
-      - 'v$(date +%Y%m%d%H%M%S)'
+    - 'v$(date +%Y%m%d%H%M%S)'
 jobs:
   Pic-spider:
     runs-on: ubuntu-latest
