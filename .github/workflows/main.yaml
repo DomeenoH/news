@@ -41,9 +41,9 @@ jobs:
           github_token: ${{ secrets.TOKEN }}
       - name: 'Create a Release'
         uses: elgohr/Github-Release-Action@master
-           env:
+        env:
            GITHUB_TOKEN: ${{ secrets.TOKEN }}
-         with:
+        with:
            args: news
 
       # - name: 'Create a Release'
@@ -53,5 +53,3 @@ jobs:
         # with:
         #   args: news
         
-
-          args: MyReleaseMessage
