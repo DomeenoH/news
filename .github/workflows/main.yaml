@@ -5,7 +5,7 @@ on:
     branches: 
       - main
   schedule:
-   - cron: '0 22 * * *'
+   - cron: '1 0 * * *'
 jobs:
   Pic-spider:
     runs-on: ubuntu-latest
