@@ -15,7 +15,7 @@ tx_key = os.environ['KEY']
 #背景
 
 def bgimg():
-    bg_size = (1080, 2500)
+    bg_size = (1080, 2600)
     bg_small=(980,330)
     img = Image.new("RGBA",bg_size,(245,245,245))
     draw = ImageDraw.Draw(img)
