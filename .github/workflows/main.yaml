@@ -5,7 +5,7 @@ on:
     branches: 
     - main
     tags:
-    - 'v$(date +%Y%m%d)'
+    - 'v$(date +%Y%m%d%H%M%S)'
   schedule:
   - cron: '1 0 * * *'
   - cron: '1 16 * * *'
