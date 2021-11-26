@@ -64,6 +64,8 @@ def draw_text(draw):
         today = '星期日'
     else:
         today = '星期' + cn2an.an2cn(today)
+    import time
+    localtime = time.asctime( time.localtime(time.time()) )
     font = ImageFont.truetype(fontpath1,80, encoding="utf-8")
     draw.text((430, 80), today, font=font, fill=(255, 255, 255))
     font_small = ImageFont.truetype(fontpath1, 35)
@@ -76,7 +78,10 @@ def draw_text(draw):
 
     font_sentence = ImageFont.truetype(fontpath, 25)
     draw.text((220,280),verse(),font=font_sentence)
-    draw.text((820,320), "来点每日新闻！",font=font_sentence)
+    draw.text((820,300), "来点每日新闻！",font=font_sentence)
+    draw.text((780,320), "来点每日新闻！", localtime,font=font_sentence)
+    
+    
 
 
     font_news = ImageFont.truetype(fontpath, 35)
