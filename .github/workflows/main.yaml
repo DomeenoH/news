@@ -8,7 +8,7 @@ on:
   - cron: '1 0 * * *'
   - cron: '1 16 * * *'
     tags:
-    - 'v$(date +%Y%m%d%H%M%S)'
+    - 'v$(date +%Y%m%d)'
 jobs:
   Pic-spider:
     runs-on: ubuntu-latest
