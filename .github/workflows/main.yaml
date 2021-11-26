@@ -51,7 +51,7 @@ jobs:
         env:
            GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-           args: news ⌚$(date +%Y%m%d)
+           args: news
 
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
