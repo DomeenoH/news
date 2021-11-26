@@ -76,9 +76,9 @@ def draw_text(draw):
 
     font_sentence = ImageFont.truetype(fontpath, 25)
     draw.text((220,280),verse(),font=font_sentence)
-    draw.text((820,300), "来点每日新闻！",font=font_sentence)
+    draw.text((500,300), "来点每日新闻！",font=font_sentence)
     draw.text((650,330), "更新于", font=font_sentence)
-    draw.text((750,330), strftime("%Y-%m-%d %H:%M:%S", localtime(time())), font=font_sentence)
+    draw.text((730,330), strftime("%Y-%m-%d %H:%M:%S", localtime(time())), font=font_sentence)
     
     
 
