@@ -3,4 +3,4 @@
 > 每隔半个小时更新一次，输出到[这里](outpic/news.png)   
 > [![GitHub Actions news](https://github.com/DomeenoH/news/actions/workflows/main.yaml/badge.svg)](https://github.com/DomeenoH/news/actions/workflows/main.yaml)
 
-
+![最新的图片](outpic/news.png)
