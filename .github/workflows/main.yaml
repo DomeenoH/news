@@ -7,7 +7,7 @@ on:
     tags:
     - 'v$(date +%Y%m%d%H%M%S)'
   schedule:
-  - cron: '*/5 * * * *'
+  - cron: '*/10 * * * *'
 jobs:
   Pic-spider:
     runs-on: ubuntu-latest
