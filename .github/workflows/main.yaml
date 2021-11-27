@@ -30,7 +30,7 @@ jobs:
           TZ: 'Asia/Shanghai'
         timeout-minutes: 360
         run: bash ./main.sh
-        - name: pull-request-action
+      - name: pull-request-action
         uses: vsoch/pull-request-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
